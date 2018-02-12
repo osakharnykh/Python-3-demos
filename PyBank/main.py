@@ -72,3 +72,13 @@ print("Total revenue:  $"+str(rev_sum))
 print("Average revenue change:  $"+str(int(av_ch)))
 print("Greatest increase in revenue:   "+str(m_inc)+"  $"+str(gr_inc))
 print("Greatest decrease in revenue:   "+str(m_dec)+"  $"+str(gr_dec))
+
+output_path=os.path.join('results.csv')
+with open(output_path,'w',newline='') as csvfile:
+    csvwriter=csv.writer(csvfile,delimiter=',')
+    csvwriter.writerow(['Total months',str(m_sum)])
+    csvwriter.writerow(['Total revenue',str(rev_sum)])
+    csvwriter.writerow(['Average revenue change',str(int(av_ch))])
+    csvwriter.writerow(['Greatest increase',str(m_inc),str(gr_inc)])
+    csvwriter.writerow(['Greatest decrease',str(m_dec),str(gr_dec)])
+    
