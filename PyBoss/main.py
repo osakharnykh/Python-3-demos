@@ -2,7 +2,7 @@ import os
 import csv
 
 file1=os.path.join('employee_data1.csv')
-file2=os.path.join('employee_data1.csv')
+file2=os.path.join('employee_data2.csv')
 
 empid=[]
 name=[]
